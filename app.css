@@ -1,10 +1,37 @@
 body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
   background-color: #60a9ff;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
+
 html {
   box-sizing: border-box;
   font-family: "Open Sans";
@@ -44,6 +71,7 @@ html {
 
 .pricing-features {
   margin: 50px 0 25px;
+  padding-left: 0;
   /* Margin is top sides bottom */
   color: #016ff9;
 }
@@ -66,4 +94,31 @@ html {
   display: block;
   font-size: 32px;
   font-weight: 700;
+}
+
+.pricing-button {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  color: #348efe;
+  display: inline-block;
+  padding: 15px 35px;
+  text-decoration: none;
+  margin: 25px 0;
+  transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+  background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured {
+  background-color: #48aaff;
+  color: white;
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:focus {
+  background-color: #269aff;
+  color: white;
 }
